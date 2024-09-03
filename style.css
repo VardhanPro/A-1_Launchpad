@@ -1,0 +1,254 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    /* Align text to the left */
+    padding: 1em 2em;
+    /* Adjust padding to accommodate logo */
+    display: flex;
+    /* Use flexbox for alignment */
+    align-items: center;
+    /* Vertically align items */
+}
+
+h1 {
+    margin: 0;
+    /* Remove default margin */
+    text-align: center;
+    /* Center the heading text */
+    flex: 1;
+    /* Allow heading to take up remaining space */
+}
+
+.logo {
+    width: 100px;
+    /* Adjust the size of the logo as needed */
+    height: auto;
+    /* Maintain aspect ratio */
+    margin-right: 20px;
+    /* Space between logo and heading */
+}
+
+#unico-shield {
+    text-align: center;
+    margin: 20px 0;
+    /* Adjust the spacing between header and product list */
+}
+
+#unico-shield h2 {
+    font-size: 28px;
+    /* Adjust the font size */
+    font-family: 'Arial', sans-serif;
+    /* Use the same font-family */
+    color: black;
+    /* Set the color to black for "UNICO®" */
+    display: inline-block;
+    /* Keep the text in line */
+    margin: 0;
+    /* Remove any default margin */
+}
+
+#unico-shield .shield {
+    color: #C00000;
+    /* Use the specific red color for "Shield" */
+}
+
+#unico-shield p {
+    font-size: 16px;
+    /* Adjust the size to match the tagline */
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    margin: 5px 0 20px 0;
+    /* Adjust margins for spacing */
+}
+
+.learn-more-button {
+    background-color: #8a2b61;
+    /* Exact color from the image */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 0px;
+    /* Space between text and button */
+    font-family: Arial, sans-serif;
+    /* Match the font style */
+}
+
+.learn-more-button:hover {
+    background-color: #7a2658;
+    /* Slightly darker on hover */
+}
+
+#product-list {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 20px;
+    padding: 20px;
+    justify-items: center;
+}
+
+/* Full-screen layout: 2x3 grid */
+@media (min-width: 1024px) {
+    #product-list {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media ((min-width: 512px) and (max-width: 1023px)) {
+    #product-list {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+.product {
+    background-color: white;
+    border: 1px solid #ccc;
+    padding: 15px;
+    text-align: center;
+    width: 200px;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.product:hover {
+    transform: scale(1.05);
+}
+
+.product img {
+    width: 100%;
+    height: auto;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: white;
+    padding: 20px;
+    width: 400px;
+    text-align: center;
+    position: relative;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.quantity-selector {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 15px 0;
+}
+
+.quantity-selector button {
+    background-color: #333;
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.quantity-selector input {
+    width: 50px;
+    text-align: center;
+    font-size: 16px;
+    margin: 0 10px;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+#cart {
+    background-color: #fff;
+    padding: 20px;
+    border-top: 1px solid #ccc;
+    text-align: center;
+}
+
+#cart-items {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+#cart-items li {
+    margin: 10px 0;
+}
+
+#cart button {
+    background-color: #8e2964;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+    width: 200px;
+}
+
+#cart button:hover {
+    background-color: #721b4e;
+}
+
+button {
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #555;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 5px;
+    /* Decreased padding to reduce footer size */
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    height: 40px;
+    /* Adjust the height as needed */
+    display: flex;
+    align-items: flex-start;
+    /* Aligns text to the top of the footer */
+    justify-content: center;
+    font-size: 14px;
+    /* Adjust font size if needed */
+}

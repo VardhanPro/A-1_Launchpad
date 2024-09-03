@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A1 Fence Products</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/logo-removebg.ico">
+</head>
+
+<body>
+    <header>
+        <img src="images/logo.png" alt="A1 Fence Products" class="logo">
+        <h1>A1 Fence Products Company Private Limited</h1>
+    </header>
+
+    <section id="unico-shield">
+        <h2>UNICO<sup>®</sup> <span class="shield">Pro</span></h2>
+        <p>Modular Fencing Systems for Professional Perimeter Demarcation</p>
+    </section>
+
+    <div id="unico-info" style="text-align: center;">
+        <button class="learn-more-button" onclick="window.open('https://a1unico.com/unicopro/', '_blank')">Learn More</button>
+    </div>
+
+    <section id="product-list">
+        <!-- Displaying products -->
+        <div class="product" onclick="viewDetails('base-plate')">
+            <img src="images/baseplate.jpeg" alt="Base Plate">
+            <h2>Base Plate</h2>
+            <p>₹25.00</p>
+        </div>
+        <div class="product" onclick="viewDetails('anchor-bolt')">
+            <img src="images/anchorbolt.jpeg" alt="Anchor Bolt">
+            <h2>Anchor Bolt</h2>
+            <p>₹15.00</p>
+        </div>
+        <div class="product" onclick="viewDetails('post-cap')">
+            <img src="images/postcap.jpeg" alt="Post Cap">
+            <h2>Post Cap</h2>
+            <p>₹50.00</p>
+        </div>
+        <div class="product" onclick="viewDetails('clamp')">
+            <img src="images/clamp.jpeg" alt="Clamp">
+            <h2>Clamp</h2>
+            <p>₹50.00</p>
+        </div>
+        <div class="product" onclick="viewDetails('fence-post')">
+            <img src="images/fencepost.jpeg" alt="Fence Post">
+            <h2>Fence Post</h2>
+            <p>₹90.00</p>
+        </div>
+        <div class="product" onclick="viewDetails('weld-mesh-panel')">
+            <img src="images/weldmeshpanel.jpeg" alt="Weld Mesh Panel">
+            <h2>Weld Mesh Panel</h2>
+            <p>₹150.00</p>
+        </div>
+    </section>
+
+    <!-- Modal for displaying product details -->
+    <div id="product-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <img id="modal-img" src="" alt="">
+            <h2 id="modal-title"></h2>
+            <p id="modal-description"></p>
+            <p id="modal-price"></p>
+
+            <!-- Quantity Selector -->
+            <div class="quantity-selector">
+                <button id="decrease-quantity">-</button>
+                <input type="number" id="quantity-input" value="1" min="1">
+                <button id="increase-quantity">+</button>
+            </div>
+
+            <button onclick="addToCart()">Add to Cart</button>
+        </div>
+    </div>
+
+
+    <div id="cart">
+        <h2>Shopping Cart</h2>
+        <ul id="cart-items"></ul>
+        <p id="subtotal-price">Subtotal: ₹ 0.00</p>
+        <p id="gst">GST and other taxes (18%): ₹ 0.00</p>
+        <p id="total-price"><b>Total: ₹ 0.00</b></p>
+        <button onclick="checkout()">Checkout</button>
+    </div>
+
+    <p><br></p>
+    <footer>
+        <p>&copy; 2024 A1 Fence Products Company Private Limited</p>
+    </footer>
+
+
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>
